@@ -17,21 +17,6 @@
     .attr('width', gameOptions.width)
     .attr('height', gameOptions.height);
 
-  // Create enemies and append to DOM
-  // var createEnemies = function() {
-  //   var svg = d3.select('svg');
-  //   for(var i = 0; i < gameOptions.numOfEnemies; i++) {
-  //     svg.append('circle')
-  //       .attr('r', gameOptions.enemyRadius)
-  //       .attr('cx', function() {
-  //         return Math.random() * gameOptions.width;
-  //       })
-  //       .attr('cy', function() {
-  //         return Math.random() * gameOptions.height;
-  //       });
-  //   }
-  // };
-
   // Create player and append to DOM
 
   // Make the enemies move randomly
@@ -54,8 +39,8 @@
       .attr('r', 10);
 
     enemies.transition()
-      .duration(2000)
-      .ease('sine')
+      .duration(1000)
+      .ease('swing')
       .attr('class', 'enemy')
       .attr('cx', function(d) {return d.x;})
       .attr('cy', function(d) {return d.y;});
